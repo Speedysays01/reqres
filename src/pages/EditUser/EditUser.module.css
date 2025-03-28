@@ -1,0 +1,105 @@
+.editContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  padding: 1rem; /* Ensures spacing on smaller screens */
+}
+
+.editForm {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  width: 22rem;
+  max-width: 90vw; /* Limits form width on small screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.625rem;
+  margin: 0.625rem 0;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+}
+
+.saveButton,
+.cancelButton {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  margin-bottom: 0.625rem;
+}
+
+.saveButton {
+  background-color: #3c6e71;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #244244;
+}
+
+.cancelButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancelButton:hover {
+  background-color: #c82333;
+}
+
+.error {
+  color: red;
+  margin-bottom: 0.625rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .editContainer {
+    padding: 1rem; /* Reduces padding on smaller screens */
+    align-self: center;
+    overflow-x: hidden;
+  }
+  .editForm {
+    padding: 1.5rem;
+    width: 80%;
+    top: -5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .inputField {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .saveButton,
+  .cancelButton {
+    padding: 0.625rem;
+    font-size: 0.9rem;
+  }
+}

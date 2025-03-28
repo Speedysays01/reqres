@@ -1,0 +1,202 @@
+/* Container */
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  background: #f8f8f8;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+
+  h2{
+    font-size: 3rem;
+    margin-top: -1rem;
+  }
+
+}
+
+/* User Grid */
+.userGrid {
+  display: flex;
+  flex-wrap: wrap; /* Ensures wrapping for smaller screens */
+  justify-content: center;
+  gap: 1.25rem; /* 20px */
+  padding: 1.25rem; /* 20px */
+  width: 100%;
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  margin-left: -2rem;
+}
+
+/* User Card */
+.userCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.625rem; /* 10px */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 18rem; /* 250px */
+  flex: 1 1 14rem; /* Ensures flexibility while maintaining structure */
+}
+
+/* Avatar */
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+/* Name and Email */
+h3 {
+  margin: 0.625rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p {
+  color: gray;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem; /* 10px */
+  margin-top: 0.625rem;
+}
+
+/* Buttons */
+.editButton,
+.deleteButton {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.3125rem; /* 5px */
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.editButton {
+  background-color: #57a0a4;
+  color: black;
+  border: solid 0.125rem black;
+  transition: 0.3s;
+}
+
+.deleteButton {
+  background-color: #f52d3e;
+  color: black;
+  border: solid 0.125rem black;
+  transition: 0.3s;
+}
+
+.editButton:hover {
+  background-color: white;
+}
+
+.deleteButton:hover {
+  background-color: white;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 75rem; /* 1200px */
+  padding-inline: 1.25rem;
+  margin: 0 auto;
+}
+
+.pagination button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  background-color: #3c6e71;
+  color: white;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  background: #182c2d;
+}
+
+.pagination button:disabled {
+  background-color: #b7b7b7;
+  cursor: not-allowed;
+}
+
+/* Loading & Error */
+.loading {
+  color: #007bff;
+  font-size: 1.125rem;
+}
+
+.error {
+  color: red;
+  font-size: 1.125rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container{
+    top: -1rem;
+
+    
+  h2{
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  }
+  .userGrid {
+    gap: 1rem;
+    margin-left: 0rem;
+  }
+
+  .userCard {
+    /* width: 90%; */
+    max-width: 85%; /* Ensures it takes most of the screen width */
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+
+  .actions {
+    flex-direction: column; /* Stacks buttons vertically on small screens */
+  }
+
+  .editButton,
+  .deleteButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container{
+    position: absolute;
+    left: -1;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .userCard {
+    max-width: 100%; /* Full width on very small screens */
+  }
+
+  .pagination {
+    flex-direction: column; /* Stacks pagination buttons */
+    gap: 0.5rem;
+  }
+}
